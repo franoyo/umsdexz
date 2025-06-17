@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unidad Médica santa fé</title>
+  <link rel="stylesheet" href="css/sedes.css" type="text/css">
+</head>
+
+<header>
+  <div class="header-container">
+    <div class="logo">
+      <a href="inicio.html"><img class="logo-principal" src="img/menu/logoUMS.png" alt=""></a>
+    </div>
+
+    <!-- Menú de escritorio -->
+    <nav class="nav-desktop">
+      <ul class="tabla">
+        <li><a href="inicio.html">inicio</a></li>
+        <li><a href="acerca-nosotros.html">Acerca de nosotros</a></li>
+        <li><a href="sedes.html">Sedes</a></li>
+        <li class="contac"><a href="contáctanos.html">Contáctanos</a></li>
+      </ul>
+    </nav>
+
+    <!-- IMPORTANTE... el menu hamburguesa y el botón de cierre, están puesto como unicode en css -->
+    <div class="hamburger" id="hamburger"></div>
+  </div>
+
+</header>
+
+<!--  Mover el menú móvil AQUÍ, fuera del header -->
+<nav id="menuMovil">
+  <ul>
+    <li><a href="inicio.html">Inicio</a></li>
+    <li><a href="acerca-nosotros.html">Acerca de nosotros</a></li>
+    <li><a href="sedes.html">Sedes</a></li>
+    <li><a href="contáctanos.html">Contáctanos</a></li>
+  </ul>
+</nav>
+
+
+<body>
+
+  <div class="wrapper">
+
+
+    <!-- Botón flotante de accesibilidad -->
+    <button id="Botonaccesible" class="aparecer-scroll"
+      style="position: fixed; bottom: 20px; right: 20px; z-index: 1001;"><img
+        src="img/boton-accesibilidad/accesibilidad.png" alt="">
+    </button>
+
+    <!-- Menú desplegable de accesibilidad -->
+    <div id="menuaccesible" class="accessibility-menu">
+      <button onclick="decreaseFontSize()" title="Reducir tamaño de letra">
+        <img src="img/boton-accesibilidad/dados1.png" alt="Reducir letra">
+      </button>
+      <button onclick="increaseFontSize()" title="Aumentar tamaño de letra">
+        <img src="img/boton-accesibilidad/dados2.png" alt="Aumentar letra">
+      </button>
+      <button id="darkModeToggle" onclick="toggleDarkMode()" title="Modo oscuro">
+        <img id="modoIcono" src="img/boton-accesibilidad/dados1.png" alt="Modo oscuro">
+      </button>
+    </div>
+
+
+
+
+    <!--Informacion superior del menú-->
+    <div class="informacion">
+      <ul class="info">
+        <li>(dirección de la sede principal)</li>
+        <li>(telefonía del servicio al cliente)</li>
+      </ul>
+    </div>
+
+
+    <!--Titulo del conetenedor central-->
+    <div class="localizacion">
+      <div class="ubicacion">
+        <img src="img/sedes/ubicacion.png" alt="">
+      </div>
+      <div class="text-titul">
+        <p>Conoce nuestras sedes</p>
+        <h2>Aliados Compensar</h2>
+      </div>
+    </div>
+
+
+
+    <!--Contenedor central-->
+    <main class="sedesS">
+      <section class="card">
+        <img src="img/sedes/ejemplos sedes.jpeg" alt="Avatar">
+        <div class="container">
+          <h4><b>Calle 127 Unicentro</b></h4><br>
+          <p><a
+              href="https://www.google.com/maps/place/Ac+127+%2315a-55,+Bogot%C3%A1/@4.7039494,-74.0466033,17z/data=!3m1!4b1!4m6!3m5!1s0x8e3f9ab2fa9721fd:0xa9eabf0d7600add1!8m2!3d4.7039441!4d-74.0440284!16s%2Fg%2F11fq4l0dv9?entry=ttu&g_ep=EgoyMDI1MDYwOS4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank">AV
+              Calle 127#15A-55 <img src="img/sedes/icon-maps-compensar.png" alt=""> </a></p>
+        </div>
+        <div class="boton-sedes">
+          <a class="butum" href="sedes-127.html">Ver sede</a>
+        </div>
+      </section>
+
+      <section class="card">
+        <img src="img/sedes/ejemplos sedes.jpeg" alt="Avatar">
+        <div class="container">
+          <h4><b>Calle 122 Santa bárbara</b></h4><br>
+          <p><a
+              href="https://www.google.com/maps/place/Cl.+122+%2315a-94,+Bogot%C3%A1/@4.7004332,-74.0449252,17.75z/data=!4m5!3m4!1s0x8e3f9ab22a6d8217:0x2a7a9918611382a6!8m2!3d4.7011687!4d-74.0450033?entry=ttu&g_ep=EgoyMDI1MDYwOS4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank">Calle
+              122 #15A-94 <img src="img/sedes/icon-maps-compensar.png" alt=""> </a></p>
+        </div>
+        <div class="boton-sedes">
+          <a href=" <!--completar espacio--> " class="butum">Ver sede</a>
+        </div>
+      </section>
+
+      <section class="card">
+        <img src="img/sedes/ejemplos sedes.jpeg" alt="Avatar">
+        <div class="container">
+          <h4><b>Calle 95 La castellana</b></h4><br>
+          <p><a
+              href="https://www.google.com/maps/place/Cra.+45+%2395-81,+Bogot%C3%A1/@4.6847059,-74.0606993,17z/data=!3m1!4b1!4m6!3m5!1s0x8e3f9aea3f2aab91:0xd82d4f7c77b041f7!8m2!3d4.6847006!4d-74.0581244!16s%2Fg%2F11x2m3fjx4?entry=ttu&g_ep=EgoyMDI1MDYwOS4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank">Av
+              Cr 45 #95-81 <img src="img/sedes/icon-maps-compensar.png" alt=""> </a></p>
+        </div>
+        <div class="boton-sedes">
+          <a class="butum" data-url="servicios.html">Ver sede</a>
+        </div>
+      </section>
+
+      <section class="card">
+        <img src="img/sedes/ejemplos sedes.jpeg" alt="Avatar">
+        <div class="container">
+          <h4><b>Kennedy | Francisco josé de caldas</b></h4><br>
+          <p><a
+              href="https://www.google.com/maps/place/Cra.+78k+%2333A-39Sur,+Kennedy,+Bogot%C3%A1/@4.6269436,-74.1534687,17z/data=!3m1!4b1!4m6!3m5!1s0x8e3f9e9e4ec8e4bd:0xa83ce0042d151fd6!8m2!3d4.6269383!4d-74.1508938!16s%2Fg%2F11pdflkf2v?entry=ttu&g_ep=EgoyMDI1MDYwOS4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank">Cra
+              78K #33A-39 Sur <img src="img/sedes/icon-maps-compensar.png" alt=""> </a></p>
+        </div>
+        <div class="boton-sedes">
+          <a href=" <!-- completar este espacio -->" class="butum" data-url="servicios.html">Ver sede</a>
+        </div>
+      </section>
+
+      <section class="card">
+        <img src="img/sedes/ejemplos sedes.jpeg" alt="Avatar">
+        <div class="container">
+          <h4><b>Kennedy || Francisco josé de caldas</b></h4><br>
+          <p><a
+              href="https://www.google.com/maps/place/Cra.+78k+%2333+A+-17+Sur,+Bogot%C3%A1/@4.6271832,-74.1532504,17z/data=!3m1!4b1!4m6!3m5!1s0x8e3f9e9e4a46ad67:0x323b99642812b7ac!8m2!3d4.6271779!4d-74.1506755!16s%2Fg%2F11rjjkkl2y?entry=ttu&g_ep=EgoyMDI1MDYwOS4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank">Cra
+              78K #33A-03 Sur <img src="img/sedes/icon-maps-compensar.png" alt=""> </a></p>
+        </div>
+        <div class="boton-sedes">
+          <a href=" <!-- completar este espacio -->" class="butum" data-url="servicios.html">Ver sede</a>
+        </div>
+      </section>
+
+      <section class="card">
+        <img src="img/sedes/ejemplos sedes.jpeg" alt="Avatar">
+        <div class="container">
+          <h4><b>Oficinas administrativas Unicentro</b></h4><br>
+          <p><a
+              href="https://www.google.com/maps/place/Ac+127+%2315a-55,+Bogot%C3%A1/@4.7039494,-74.0466033,17z/data=!3m1!4b1!4m6!3m5!1s0x8e3f9ab2fa9721fd:0xa9eabf0d7600add1!8m2!3d4.7039441!4d-74.0440284!16s%2Fg%2F11fq4l0dv9?entry=ttu&g_ep=EgoyMDI1MDYwOS4wIKXMDSoASAFQAw%3D%3D/"
+              target="_blank">AV
+              Calle 127#15A-55 <img src="img/sedes/icon-maps-compensar.png" alt=""> </a></p>
+        </div>
+        <div class="boton-sedes">
+          <a href=" <!-- completar este espacio -->" class="butum" data-url="servicios.html">Ver sede</a>
+        </div>
+      </section>
+    </main>
+
+
+
+
+    <!--Titulo del conetenedor sura-->
+    <div class="localizacion-sura">
+      <div class="text-titul-sura">
+        <p>Conoce nuestra sede única</p>
+        <h2>Aliados Sura</h2>
+      </div>
+    </div>
+
+    <!-- contenedor de sedes SURA -->
+    <div class="sedes-s">
+      <section class="card-sura">
+        <img src="img/sedes/ejemplos sedes.jpeg" alt="Avatar-sura">
+        <div class="container-sura">
+          <h4><b>Américas - Marsella</b></h4><br>
+          <p><a
+              href="https://www.google.com/maps/place/Av.+de+las+Am%C3%A9ricas+%2369C+56,+Bogot%C3%A1/@4.6302055,-74.1324506,17z/data=!3m1!4b1!4m6!3m5!1s0x8e3f9c0229fda72f:0x62ee215f78b97abd!8m2!3d4.6302002!4d-74.1298757!16s%2Fg%2F11pw1yc9x6?entry=ttu&g_ep=EgoyMDI1MDYwOS4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank">Av Americas #69C-56 <img src="img/sedes/icon-maps-sura.png" alt=""></a></p>
+        </div>
+        <div class="boton-sedes-sura">
+          <a href="<!-- completar este espacio -->" class="butum-sura">Ver sede</a>
+        </div>
+      </section>
+    </div>
+
+
+    <!--footer-->
+    <footer>
+      <div class="contenidos">
+
+        <div class="logofooter">
+          <img src="img/footer/logoUMSblanco.png" alt="">
+        </div>
+
+
+        <ul class="quienesom">
+          <li>
+            <h3>Sobre nosotros</h3>
+          </li>
+          <li><a href="acerca-nosotros.html">Quienes somos</a></li>
+          <li><a href="acerca-nosotros.html">Objetivos de calidad</a></li>
+          <li><a href="" onclick="document.getElementById('id01').style.display='block'"><i>Acceso empleados</i></a>
+          </li>
+        </ul>
+
+        <ul class="infocontact">
+          <li>
+            <h3>Información de contacto</h3>
+          </li>
+          <li><a href="contáctanos.html">Contáctanos</a></li>
+          <li><a href="sedes.html">Sedes</a></li>
+          <li>Horario de atención (dirección)</li>
+          <li>Línea de atención Call center (número telefonía)</li>
+        </ul>
+
+        <ul class="Polisticasyter">
+          <li>
+            <h3>Políticas y términos</h3>
+          </li>
+          <li><a href="#nada">Términos y condiciones</a></li>
+          <li><a href="#nada">Política de privacidad</a></li>
+          <li><a href="#nada">Aviso legal</a></li>
+        </ul>
+      </div>
+
+      <div class="contenidos2">
+        <ul class="derechosfo">
+          <li>© [año] [Nombre de la empresa]. Todos los derechos reservados.</li>
+          <li>Diseñado por [nombre del diseñador o agencia]</li>
+          <li>Desarrollado por [nombre de la empresa/desarrollador]</li>
+        </ul>
+      </div>
+    </footer>
+
+
+
+    <script src="js/scriptsedes.js"></script>
+
+  </div>
+</body>
+
+</html>

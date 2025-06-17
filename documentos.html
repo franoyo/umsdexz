@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador con Acordeones</title>
+    <link rel="stylesheet" href="css/documentos.css" type="text/css">
+</head>
+
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <a href="inicio.html"><img class="logo-principal" src="img/menu/logoUMS.png" alt=""></a>
+        </div>
+
+        <!-- Menú de escritorio -->
+        <nav class="nav-desktop">
+            <ul class="tabla">
+                <li><a href="inicio.html">inicio</a></li>
+                <li><a href="#inicio/empleados">Inicio/empleados</a></li>
+            </ul>
+        </nav>
+
+        <!-- IMPORTANTE... el menu hamburguesa y el botón de cierre, están puesto como unicode en css -->
+        <div class="hamburger" id="hamburger"></div>
+    </div>
+
+</header>
+
+<!--  Mover el menú móvil AQUÍ, fuera del header -->
+<nav id="menuMovil">
+    <ul>
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="#inicio/empleados">Inicio/empleados</a></li>
+    </ul>
+</nav>
+
+
+<body>
+
+    <!-- Botón de opciones de sesión de usuario -->
+    <div class="sesiones">
+        <button class="altera-sesion">
+            <a href="#nada"><img src="img/documentos/i-sesion.png" alt="iniciar-sesion"></a>
+        </button>
+        <div class="menu-sesion">
+            <ul>
+                <li><a href="#nada">Cerrar sesión <img src="img/documentos/cerrar-sesion.png" alt=""></a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+    <!-- Botón flotante de accesibilidad -->
+    <button id="Botonaccesible" class="aparecer-scroll"
+        style="position: fixed; bottom: 20px; right: 20px; z-index: 1001;"><img
+            src="img/boton-accesibilidad/accesibilidad.png" alt="">
+    </button>
+
+    <!-- Menú desplegable de accesibilidad -->
+    <div id="menuaccesible" class="accessibility-menu">
+        <button onclick="decreaseFontSize()" title="Reducir tamaño de letra">
+            <img src="img/boton-accesibilidad/dados1.png" alt="Reducir letra">
+        </button>
+        <button onclick="increaseFontSize()" title="Aumentar tamaño de letra">
+            <img src="img/boton-accesibilidad/dados2.png" alt="Aumentar letra">
+        </button>
+        <button id="darkModeToggle" onclick="toggleDarkMode()" title="Modo oscuro">
+            <img id="modoIcono" src="img/boton-accesibilidad/dados1.png" alt="Modo oscuro">
+        </button>
+    </div>
+
+
+    <div class="titulo">
+        <h1>Gestión Documental</h1>
+    </div>
+
+    <div class="buscador-container">
+        <input type="text" id="buscador" placeholder="Buscar documento">
+    </div>
+
+    <!-- Acordeon 1 -->
+    <div class="acordeon-container">
+        <div class="acordeon" data-label="MC-FT-04 LISTADO DE CONTROL DE INFORMACION DOCUMENTADA">
+            <button class="acordeon-btn">MC-FT-04 LISTADO DE CONTROL DE INFORMACIÓN DOCUMENTADA <span><svg
+                        class="flecha-a" width="18" height="19" viewBox="0 0 18 19" fill="none">
+                        <path d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                            fill="currentColor" />
+                    </svg></span></button>
+            <div class="panel">
+                <ul>
+                    <li><a href="documentos/tema_doc1.pdf" download>Descargar Documento Tema </a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Acordeon 2 -->
+        <div class="acordeon" data-label="CENTRO ONCOLOGICO SANTA FÉ-COS">
+            <button class="acordeon-btn">CENTRO ONCOLÓGICO SANTA FÉ-COS <span><svg class="flecha-a" width="18"
+                        height="19" viewBox="0 0 18 19" fill="none">
+                        <path d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                            fill="currentColor" />
+                    </svg></span></button>
+            <div class="panel">
+                <ul>
+                    <li><a href="documentos/tema_doc1.pdf" download>Descargar Documento Tema</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Acordeon 3 -->
+        <div class="acordeon" data-label="DIRECCION ESTRATEGICA">
+            <button class="acordeon-btn">DIRECCIÓN ESTRATEGICA <span><svg class="flecha-a" width="18" height="19"
+                        viewBox="0 0 18 19" fill="none">
+                        <path d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                            fill="currentColor" />
+                    </svg></span></button>
+            <div class="panel">
+                <ul>
+                    <li><a href="documentos/tema_doc1.pdf" download>Descargar Documento Tema</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Acordeon 4 -->
+        <div class="acordeon" data-label="MEJORA CONTINUA">
+            <button class="acordeon-btn">MEJORA CONTINUA <span><svg class="flecha-a" width="18" height="19"
+                        viewBox="0 0 18 19" fill="none">
+                        <path d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                            fill="currentColor" />
+                    </svg></span></button>
+            <div class="panel">
+                <ul>
+                    <li><a href="documentos/tema_doc1.pdf" download>Descargar Documento Tema</a></li>
+                </ul>
+
+                <!-- Subtema A1 -->
+                <div class="subacordeon" data-label="Mejora continua">
+                    <button class="acordeon-btn">Mejora continua <span><svg class="flecha-a" width="13" height="14"
+                                viewBox="0 0 18 19" fill="none">
+                                <path d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                    fill="currentColor" />
+                            </svg></span></button>
+                    <div class="panel">
+                        <ul>
+                            <li><a href="documentos/subtema_doc1.pdf" download>Descargar Subtema A1</a></li>
+                        </ul>
+
+                        <!-- Coacordeon 1 -->
+                        <div class="coacordeon" data-label="Formatos">
+                            <button class="acordeon-btn">Formatos <span><svg class="flecha-a" width="13" height="14"
+                                        viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo1.pdf" download>Descargar Coacordeón A1.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Coacordeon 2 -->
+                        <div class="coacordeon" data-label="Manual MA">
+                            <button class="acordeon-btn">Manual <span><svg class="flecha-a" width="13" height="14"
+                                        viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo1.pdf" download>Descargar Coacordeón A1.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Coacordeon 3 -->
+                        <div class="coacordeon" data-label="procedimientos PR">
+                            <button class="acordeon-btn">Procedimientos <span><svg class="flecha-a" width="13"
+                                        height="14" viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo1.pdf" download>Descargar Coacordeón A1.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Subtema A2 -->
+                <div class="subacordeon" data-label="gestion de calidad">
+                    <button class="acordeon-btn">Gestion de calidad <span><svg class="flecha-a" width="13" height="14"
+                                viewBox="0 0 18 19" fill="none">
+                                <path d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                    fill="currentColor" />
+                            </svg></span></button>
+                    <div class="panel">
+                        <ul>
+                            <li><a href="documentos/subtema_doc2.pdf" download>Descargar Subtema A2</a></li>
+                        </ul>
+
+                        <!-- Coacordeon 1 -->
+                        <div class="coacordeon" data-label="Formatos">
+                            <button class="acordeon-btn">Formatos <span><svg class="flecha-a" width="13" height="14"
+                                        viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo2.pdf" download>Descargar Coacordeón A2.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Coacordeon 2 -->
+                        <div class="coacordeon" data-label="Procedimientos">
+                            <button class="acordeon-btn">Procedimientos <span><svg class="flecha-a" width="13"
+                                        height="14" viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo2.pdf" download>Descargar Coacordeón A2.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Subtema A3 -->
+                <div class="subacordeon" data-label="auditoria en salud">
+                    <button class="acordeon-btn">Auditoria en salud <span><svg class="flecha-a" width="13" height="14"
+                                viewBox="0 0 18 19" fill="none">
+                                <path d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                    fill="currentColor" />
+                            </svg></span></button>
+                    <div class="panel">
+                        <ul>
+                            <li><a href="documentos/subtema_doc3.pdf" download>Descargar Subtema A3</a></li>
+                        </ul>
+
+                        <!-- Coacordeon 1-->
+                        <div class="coacordeon" data-label="Formatos">
+                            <button class="acordeon-btn">Formatos <span><svg class="flecha-a" width="13" height="14"
+                                        viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo3.pdf" download>Descargar Coacordeón A3.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Coacordeon 2-->
+                        <div class="coacordeon" data-label="Procedimientos">
+                            <button class="acordeon-btn">Procedimientos <span><svg class="flecha-a" width="13"
+                                        height="14" viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo3.pdf" download>Descargar Coacordeón A3.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Subtema A4 -->
+                <div class="subacordeon" data-label="programa de seguridad del paciente">
+                    <button class="acordeon-btn">Programa de seguridad del paciente <span><svg class="flecha-a"
+                                width="13" height="14" viewBox="0 0 18 19" fill="none">
+                                <path d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                    fill="currentColor" />
+                            </svg></span></button>
+                    <div class="panel">
+                        <ul>
+                            <li><a href="documentos/subtema_doc1.pdf" download>Descargar Subtema A1</a></li>
+                        </ul>
+
+                        <!-- Coacordeon 1 -->
+                        <div class="coacordeon" data-label="Formatos">
+                            <button class="acordeon-btn">Formatos <span><svg class="flecha-a" width="13" height="14"
+                                        viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo1.pdf" download>Descargar Coacordeón A1.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Coacordeon 2 -->
+                        <div class="coacordeon" data-label="Politicas">
+                            <button class="acordeon-btn">Politicas <span><svg class="flecha-a" width="13" height="14"
+                                        viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo1.pdf" download>Descargar Coacordeón A1.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Coacordeon 3 -->
+                        <div class="coacordeon" data-label="Manual">
+                            <button class="acordeon-btn">Manual <span><svg class="flecha-a" width="13" height="14"
+                                        viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo1.pdf" download>Descargar Coacordeón A1.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Coacordeon 4 -->
+                        <div class="coacordeon" data-label="Protocolos">
+                            <button class="acordeon-btn">Protocolos <span><svg class="flecha-a" width="13" height="14"
+                                        viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo1.pdf" download>Descargar Coacordeón A1.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Coacordeon 5 -->
+                        <div class="coacordeon" data-label="Procedimientos">
+                            <button class="acordeon-btn">Procedimientos <span><svg class="flecha-a" width="13"
+                                        height="14" viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo1.pdf" download>Descargar Coacordeón A1.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Coacordeon 6 -->
+                        <div class="coacordeon" data-label="Guia">
+                            <button class="acordeon-btn">Guia <span><svg class="flecha-a" width="13" height="14"
+                                        viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo1.pdf" download>Descargar Coacordeón A1.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Subtema A5 -->
+                <div class="subacordeon" data-label="Servicio integral atención al usuario (SIAU)">
+                    <button class="acordeon-btn">Servicio integral atención al usuario (SIAU) <span><svg
+                                class="flecha-a" width="13" height="14" viewBox="0 0 18 19" fill="none">
+                                <path d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                    fill="currentColor" />
+                            </svg></span></button>
+                    <div class="panel">
+                        <ul>
+                            <li><a href="documentos/subtema_doc2.pdf" download>Descargar Subtema A2</a></li>
+                        </ul>
+
+                        <!-- Coacordeon 1 -->
+                        <div class="coacordeon" data-label="Formatos">
+                            <button class="acordeon-btn">Formatos <span><svg class="flecha-a" width="13" height="14"
+                                        viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo2.pdf" download>Descargar Coacordeón A2.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Coacordeon 2 -->
+                        <div class="coacordeon" data-label="Manual">
+                            <button class="acordeon-btn">Manual <span><svg class="flecha-a" width="13" height="14"
+                                        viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo2.pdf" download>Descargar Coacordeón A2.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Coacordeon 3 -->
+                        <div class="coacordeon" data-label="Procedimientos">
+                            <button class="acordeon-btn">Procedimientos <span><svg class="flecha-a" width="13"
+                                        height="14" viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo2.pdf" download>Descargar Coacordeón A2.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Subtema A6 -->
+                <div class="subacordeon" data-label="comites institucionales">
+                    <button class="acordeon-btn">Comités institucionales <span><svg class="flecha-a" width="13"
+                                height="14" viewBox="0 0 18 19" fill="none">
+                                <path d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                    fill="currentColor" />
+                            </svg></span></button>
+                    <div class="panel">
+                        <ul>
+                            <li><a href="documentos/subtema_doc3.pdf" download>Descargar Subtema A3</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Acordeon 5 -->
+        <div class="acordeon" data-label="ADMISIONES">
+            <button class="acordeon-btn">ADMISIONES <span><svg class="flecha-a" width="18" height="19"
+                        viewBox="0 0 18 19" fill="none">
+                        <path d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                            fill="currentColor" />
+                    </svg></span></button>
+            <div class="panel">
+                <ul>
+                    <li><a href="documentos/tema_doc1.pdf" download>Descargar Documento Tema</a></li>
+                </ul>
+
+                <!-- Subtema A1 -->
+                <div class="subacordeon" data-label="Formatos">
+                    <button class="acordeon-btn">Formatos <span><svg class="flecha-a" width="13" height="14"
+                                viewBox="0 0 18 19" fill="none">
+                                <path d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                    fill="currentColor" />
+                            </svg></span></button>
+                    <div class="panel">
+                        <ul>
+                            <li><a href="documentos/subtema_doc1.pdf" download>Descargar Subtema A1</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Subtema A2 -->
+                <div class="subacordeon" data-label="Procedimientos">
+                    <button class="acordeon-btn">Procedimientos <span><svg class="flecha-a" width="13" height="14"
+                                viewBox="0 0 18 19" fill="none">
+                                <path d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                    fill="currentColor" />
+                            </svg></span></button>
+                    <div class="panel">
+                        <ul>
+                            <li><a href="documentos/subtema_doc2.pdf" download>Descargar Subtema A2</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Subtema A3 -->
+                <div class="subacordeon" data-label="Protocolos">
+                    <button class="acordeon-btn">Protocolos <span><svg class="flecha-a" width="13" height="14"
+                                viewBox="0 0 18 19" fill="none">
+                                <path d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                    fill="currentColor" />
+                            </svg></span></button>
+                    <div class="panel">
+                        <ul>
+                            <li><a href="documentos/subtema_doc3.pdf" download>Descargar Subtema A3</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Subtema A4 -->
+                <div class="subacordeon" data-label="Indicadores">
+                    <button class="acordeon-btn">Indicadores <span><svg class="flecha-a" width="13" height="14"
+                                viewBox="0 0 18 19" fill="none">
+                                <path d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                    fill="currentColor" />
+                            </svg></span></button>
+                    <div class="panel">
+                        <ul>
+                            <li><a href="documentos/subtema_doc3.pdf" download>Descargar Subtema A3</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Acordeon 6 -->
+        <div class="acordeon" data-label="ATENCION SALUD AMBULATORIA">
+            <button class="acordeon-btn">ATENCIÓN SALUD AMBULATORIA <span><svg class="flecha-a" width="18" height="19"
+                        viewBox="0 0 18 19" fill="none">
+                        <path d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                            fill="currentColor" />
+                    </svg></span></button>
+            <div class="panel">
+                <ul>
+                    <li><a href="documentos/tema_doc1.pdf" download>Descargar Documento Tema</a></li>
+                </ul>
+
+                <!-- Subtema A1 -->
+                <div class="subacordeon" data-label="Atencion medica y de enfermeria">
+                    <button class="acordeon-btn">Atención médica y de enfermeria <span><svg class="flecha-a" width="13"
+                                height="14" viewBox="0 0 18 19" fill="none">
+                                <path d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                    fill="currentColor" />
+                            </svg></span></button>
+                    <div class="panel">
+                        <ul>
+                            <li><a href="documentos/subtema_doc1.pdf" download>Descargar Subtema A1</a></li>
+                        </ul>
+
+                        <!-- Coacordeon 1 -->
+                        <div class="coacordeon" data-label="Cosentimientos Disentimientos informados">
+                            <button class="acordeon-btn">Cosentimientos/Disentimientos informados <span><svg
+                                        class="flecha-a" width="13" height="14" viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo1.pdf" download>Descargar Coacordeón A1.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Coacordeon 2 -->
+                        <div class="coacordeon" data-label="Formatos">
+                            <button class="acordeon-btn">Formatos <span><svg class="flecha-a" width="13" height="14"
+                                        viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo1.pdf" download>Descargar Coacordeón A1.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Coacordeon 3 -->
+                        <div class="coacordeon" data-label="Protocolos">
+                            <button class="acordeon-btn">Protocolos <span><svg class="flecha-a" width="13" height="14"
+                                        viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo1.pdf" download>Descargar Coacordeón A1.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Coacordeon 4 -->
+                        <div class="coacordeon" data-label="Procedimientos">
+                            <button class="acordeon-btn">Procedimientos <span><svg class="flecha-a" width="13"
+                                        height="14" viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo1.pdf" download>Descargar Coacordeón A1.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Coacordeon 5 -->
+                        <div class="coacordeon" data-label="Manual">
+                            <button class="acordeon-btn">Manual <span><svg class="flecha-a" width="13" height="14"
+                                        viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo1.pdf" download>Descargar Coacordeón A1.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Coacordeon 6 -->
+                        <div class="coacordeon" data-label="Guia">
+                            <button class="acordeon-btn">Guia <span><svg class="flecha-a" width="13" height="14"
+                                        viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo1.pdf" download>Descargar Coacordeón A1.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Subtema A2 -->
+                <div class="subacordeon" data-label="Atencion en salud oral">
+                    <button class="acordeon-btn">Atención en salud oral <span><svg class="flecha-a" width="13"
+                                height="14" viewBox="0 0 18 19" fill="none">
+                                <path d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                    fill="currentColor" />
+                            </svg></span></button>
+                    <div class="panel">
+                        <ul>
+                            <li><a href="documentos/subtema_doc2.pdf" download>Descargar Subtema A2</a></li>
+                        </ul>
+
+                        <!-- Coacordeon 1 -->
+                        <div class="coacordeon" data-label="Cosentimientos Disentimientos informados">
+                            <button class="acordeon-btn">Cosentimientos/Disentimientos informados <span><svg
+                                        class="flecha-a" width="13" height="14" viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo1.pdf" download>Descargar Coacordeón A1.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Coacordeon 2 -->
+                        <div class="coacordeon" data-label="Formatos">
+                            <button class="acordeon-btn">Formatos <span><svg class="flecha-a" width="13" height="14"
+                                        viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo1.pdf" download>Descargar Coacordeón A1.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Coacordeon 3 -->
+                        <div class="coacordeon" data-label="Protocolos">
+                            <button class="acordeon-btn">Protocolos <span><svg class="flecha-a" width="13" height="14"
+                                        viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo1.pdf" download>Descargar Coacordeón A1.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Coacordeon 4 -->
+                        <div class="coacordeon" data-label="Procedimientos">
+                            <button class="acordeon-btn">Procedimientos <span><svg class="flecha-a" width="13"
+                                        height="14" viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo1.pdf" download>Descargar Coacordeón A1.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Coacordeon 5 -->
+                        <div class="coacordeon" data-label="Manual">
+                            <button class="acordeon-btn">Manual <span><svg class="flecha-a" width="13" height="14"
+                                        viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo1.pdf" download>Descargar Coacordeón A1.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Coacordeon 6 -->
+                        <div class="coacordeon" data-label="Guia">
+                            <button class="acordeon-btn">Guia <span><svg class="flecha-a" width="13" height="14"
+                                        viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo1.pdf" download>Descargar Coacordeón A1.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Acordeon 7 -->
+        <div class="acordeon" data-label="GESTION HUMANA">
+            <button class="acordeon-btn">GESTIÓN HUMANA <span><svg class="flecha-a" width="18" height="19"
+                        viewBox="0 0 18 19" fill="none">
+                        <path d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                            fill="currentColor" />
+                    </svg></span></button>
+            <div class="panel">
+                <ul>
+                    <li><a href="documentos/tema_doc1.pdf" download>Descargar Documento Tema</a></li>
+                </ul>
+
+                <!-- Subtema A1 -->
+                <div class="subacordeon" data-label="Gestion humana">
+                    <button class="acordeon-btn">Gestion humana <span><svg class="flecha-a" width="13" height="14"
+                                viewBox="0 0 18 19" fill="none">
+                                <path d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                    fill="currentColor" />
+                            </svg></span></button>
+                    <div class="panel">
+                        <ul>
+                            <li><a href="documentos/subtema_doc1.pdf" download>Descargar Subtema A1</a></li>
+                        </ul>
+
+                        <!-- Coacordeon 1 -->
+                        <div class="coacordeon" data-label="politica">
+                            <button class="acordeon-btn">Politica <span><svg class="flecha-a" width="13" height="14"
+                                        viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo1.pdf" download>Descargar Coacordeón A1.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Coacordeon 2 -->
+                        <div class="coacordeon" data-label="procedimiento">
+                            <button class="acordeon-btn">Procedimiento <span><svg class="flecha-a" width="13"
+                                        height="14" viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo1.pdf" download>Descargar Coacordeón A1.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Coacordeon 3 -->
+                        <div class="coacordeon" data-label="formatos">
+                            <button class="acordeon-btn">Formatos <span><svg class="flecha-a" width="13" height="14"
+                                        viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo1.pdf" download>Descargar Coacordeón A1.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Subtema A2 -->
+                <div class="subacordeon" data-label="seguridad y salud en el trabajo">
+                    <button class="acordeon-btn">Seguridad y salud en el trabajo <span><svg class="flecha-a" width="13"
+                                height="14" viewBox="0 0 18 19" fill="none">
+                                <path d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                    fill="currentColor" />
+                            </svg></span></button>
+                    <div class="panel">
+                        <ul>
+                            <li><a href="documentos/subtema_doc2.pdf" download>Descargar Subtema A2</a></li>
+                        </ul>
+
+                        <!-- Coacordeon 1 -->
+                        <div class="coacordeon" data-label="Formatos">
+                            <button class="acordeon-btn">Formatos <span><svg class="flecha-a" width="13" height="14"
+                                        viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo2.pdf" download>Descargar Coacordeón A2.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Coacordeon 2 -->
+                        <div class="coacordeon" data-label="guia">
+                            <button class="acordeon-btn">Guia <span><svg class="flecha-a" width="13" height="14"
+                                        viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo2.pdf" download>Descargar Coacordeón A2.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Coacordeon 3 -->
+                        <div class="coacordeon" data-label="instructivo">
+                            <button class="acordeon-btn">Instructivo <span><svg class="flecha-a" width="13" height="14"
+                                        viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo2.pdf" download>Descargar Coacordeón A2.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Coacordeon 4 -->
+                        <div class="coacordeon" data-label="manual">
+                            <button class="acordeon-btn">Manual <span><svg class="flecha-a" width="13" height="14"
+                                        viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo2.pdf" download>Descargar Coacordeón A2.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Coacordeon 5 -->
+                        <div class="coacordeon" data-label="politica">
+                            <button class="acordeon-btn">Politica <span><svg class="flecha-a" width="13" height="14"
+                                        viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo2.pdf" download>Descargar Coacordeón A2.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Coacordeon 6 -->
+                        <div class="coacordeon" data-label="procedimiento">
+                            <button class="acordeon-btn">Procedimiento <span><svg class="flecha-a" width="13"
+                                        height="14" viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo2.pdf" download>Descargar Coacordeón A2.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Coacordeon 7 -->
+                        <div class="coacordeon" data-label="protocolo">
+                            <button class="acordeon-btn">Protocolo <span><svg class="flecha-a" width="13" height="14"
+                                        viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo2.pdf" download>Descargar Coacordeón A2.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Coacordeon 8 -->
+                        <div class="coacordeon" data-label="documentacion">
+                            <button class="acordeon-btn">Documentación SST COVID-19 <span><svg class="flecha-a"
+                                        width="13" height="14" viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo2.pdf" download>Descargar Coacordeón A2.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Acordeon 8 -->
+        <div class="acordeon" data-label="GESTION ADMINISTRATIVA">
+            <button class="acordeon-btn">GESTIÓN ADMINISTRATIVA <span><svg class="flecha-a" width="18" height="19"
+                        viewBox="0 0 18 19" fill="none">
+                        <path d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                            fill="currentColor" />
+                    </svg></span></button>
+            <div class="panel">
+                <ul>
+                    <li><a href="documentos/tema_doc1.pdf" download>Descargar Documento Tema</a></li>
+                </ul>
+
+                <!-- Subtema A1 -->
+                <div class="subacordeon" data-label="compras">
+                    <button class="acordeon-btn">Compras <span><svg class="flecha-a" width="13" height="14"
+                                viewBox="0 0 18 19" fill="none">
+                                <path d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                    fill="currentColor" />
+                            </svg></span></button>
+                    <div class="panel">
+                        <ul>
+                            <li><a href="documentos/subtema_doc1.pdf" download>Descargar Subtema A1</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Subtema A2 -->
+                <div class="subacordeon" data-label="infraestructura">
+                    <button class="acordeon-btn">Infraestructura <span><svg class="flecha-a" width="13" height="14"
+                                viewBox="0 0 18 19" fill="none">
+                                <path d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                    fill="currentColor" />
+                            </svg></span></button>
+                    <div class="panel">
+                        <ul>
+                            <li><a href="documentos/subtema_doc2.pdf" download>Descargar Subtema A2</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Subtema A3 -->
+                <div class="subacordeon" data-label="gestion ambiental">
+                    <button class="acordeon-btn">Gestion ambiental <span><svg class="flecha-a" width="13" height="14"
+                                viewBox="0 0 18 19" fill="none">
+                                <path d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                    fill="currentColor" />
+                            </svg></span></button>
+                    <div class="panel">
+                        <ul>
+                            <li><a href="documentos/subtema_doc3.pdf" download>Descargar Subtema A3</a></li>
+                        </ul>
+
+                        <!-- Coacordeon 1 -->
+                        <div class="coacordeon" data-label="formatos">
+                            <button class="acordeon-btn">Formatos <span><svg class="flecha-a" width="13" height="14"
+                                        viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo3.pdf" download>Descargar Coacordeón A3.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Coacordeon 2 -->
+                        <div class="coacordeon" data-label="manual">
+                            <button class="acordeon-btn">Manual <span><svg class="flecha-a" width="13" height="14"
+                                        viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo3.pdf" download>Descargar Coacordeón A3.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Coacordeon 3 -->
+                        <div class="coacordeon" data-label="protocolo">
+                            <button class="acordeon-btn">Protocolo <span><svg class="flecha-a" width="13" height="14"
+                                        viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo3.pdf" download>Descargar Coacordeón A3.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Coacordeon 4 -->
+                        <div class="coacordeon" data-label="politica">
+                            <button class="acordeon-btn">Politica <span><svg class="flecha-a" width="13" height="14"
+                                        viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo3.pdf" download>Descargar Coacordeón A3.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Coacordeon 5 -->
+                        <div class="coacordeon" data-label="procedimiento">
+                            <button class="acordeon-btn">Procedimiento <span><svg class="flecha-a" width="13"
+                                        height="14" viewBox="0 0 18 19" fill="none">
+                                        <path
+                                            d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                            fill="currentColor" />
+                                    </svg></span></button>
+                            <div class="panel">
+                                <ul>
+                                    <li><a href="documentos/archivo3.pdf" download>Descargar Coacordeón A3.1</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Subtema A4 -->
+                <div class="subacordeon" data-label="administrativo">
+                    <button class="acordeon-btn">Administrativo <span><svg class="flecha-a" width="13" height="14"
+                                viewBox="0 0 18 19" fill="none">
+                                <path d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                                    fill="currentColor" />
+                            </svg></span></button>
+                    <div class="panel">
+                        <ul>
+                            <li><a href="documentos/subtema_doc3.pdf" download>Descargar Subtema A3</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Acordeon 9 -->
+        <div class="acordeon" data-label="GESTION FINANCIERA">
+            <button class="acordeon-btn">GESTIÓN FINANCIERA <span><svg class="flecha-a" width="18" height="19"
+                        viewBox="0 0 18 19" fill="none">
+                        <path d="M9 14.469L1 6.46897L1.96897 5.5L9 12.531L16.031 5.5L17 6.46897L9 14.469Z"
+                            fill="currentColor" />
+                    </svg></span></button>
+            <div class="panel">
+                <ul>
+                    <li><a href="documentos/tema_doc1.pdf" download>Descargar Documento Tema</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!--footer-->
+    <footer>
+        <div class="contenidos">
+
+            <div class="logofooter">
+                <img src="img/footer/logoUMSblanco.png" alt="">
+            </div>
+
+
+            <ul class="quienesom">
+                <li>
+                    <h3>Sobre nosotros</h3>
+                </li>
+                <li><a href="acerca-nosotros.html">Quienes somos</a></li>
+                <li><a href="acerca-nosotros.html">Objetivos de calidad</a></li>
+                <li><a href="" onclick="document.getElementById('id01').style.display='block'"><i>Acceso
+                            empleados</i></a>
+                </li>
+            </ul>
+
+            <ul class="infocontact">
+                <li>
+                    <h3>Información de contacto</h3>
+                </li>
+                <li><a href="contáctanos.html">Contáctanos</a></li>
+                <li><a href="sedes.html">Sedes</a></li>
+                <li>Horario de atención (dirección)</li>
+                <li>Línea de atención Call center (número telefonía)</li>
+            </ul>
+
+            <ul class="Polisticasyter">
+                <li>
+                    <h3>Políticas y términos</h3>
+                </li>
+                <li><a href="#nada">Términos y condiciones</a></li>
+                <li><a href="#nada">Política de privacidad</a></li>
+                <li><a href="#nada">Aviso legal</a></li>
+            </ul>
+        </div>
+
+        <div class="contenidos2">
+            <ul class="derechosfo">
+                <li>© [año] [Nombre de la empresa]. Todos los derechos reservados.</li>
+                <li>Diseñado por [nombre del diseñador o agencia]</li>
+                <li>Desarrollado por [nombre de la empresa/desarrollador]</li>
+            </ul>
+        </div>
+    </footer>
+
+
+    <script src="js/scriptdocumentos.js"></script>
+</body>
+
+</html>

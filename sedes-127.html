@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/sedes-127.css" type="text/css">
+</head>
+
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <a href="inicio.html"><img class="logo-principal" src="img/menu/logoUMS.png" alt=""></a>
+        </div>
+
+        <!-- Menú de escritorio -->
+        <nav class="nav-desktop">
+            <ul class="tabla">
+                <li><a href="inicio.html">inicio</a></li>
+                <li><a href="acerca-nosotros.html">Acerca de nosotros</a></li>
+                <li><a href="sedes.html">Sedes</a></li>
+                <li class="contac"><a href="contáctanos.html">Contáctanos</a></li>
+            </ul>
+        </nav>
+
+        <!-- IMPORTANTE... el menu hamburguesa y el botón de cierre, están puesto como unicode en css -->
+        <div class="hamburger" id="hamburger"></div>
+    </div>
+
+</header>
+
+
+<!-- los iconos de este menu están en el CSS -->
+<!--  Mover el menú móvil AQUÍ, fuera del header -->
+<nav id="menuMovil">
+    <ul>
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="acerca-nosotros.html">Acerca de nosotros</a></li>
+        <li><a href="sedes.html">Sedes</a></li>
+        <li><a href="contáctanos.html">Contáctanos</a></li>
+    </ul>
+</nav>
+
+
+<body>
+
+    <div class="informacion">
+        <ul class="info">
+            <li>(dirección de la sede principal)</li>
+            <li>(telefonía del servicio al cliente)</li>
+        </ul>
+    </div>
+
+
+    <!-- Botón flotante de accesibilidad -->
+    <button id="Botonaccesible" class="aparecer-scroll"
+        style="position: fixed; bottom: 20px; right: 20px; z-index: 1001;"><img
+            src="img/boton-accesibilidad/accesibilidad.png" alt="">
+    </button>
+
+    <!-- Menú desplegable de accesibilidad -->
+    <div id="menuaccesible" class="accessibility-menu">
+        <button onclick="decreaseFontSize()" title="Reducir tamaño de letra">
+            <img src="img/boton-accesibilidad/dados1.png" alt="Reducir letra">
+        </button>
+        <button onclick="increaseFontSize()" title="Aumentar tamaño de letra">
+            <img src="img/boton-accesibilidad/dados2.png" alt="Aumentar letra">
+        </button>
+        <button id="darkModeToggle" onclick="toggleDarkMode()" title="Modo oscuro">
+            <img id="modoIcono" src="img/boton-accesibilidad/accesibilidad.png" alt="Modo oscuro">
+        </button>
+    </div>
+
+
+    <!-- contenedor de carrusel -->
+    <main class="contenedor-127">
+        <section class="carrusel-sede127">
+            <article class="contenido-carrusel">
+                <div class="secciones"><img src="img/sede-127/sede.jpg" style="width:100%"></div>
+                <div class="secciones"><img src="img/sede-127/sede.jpg" style="width:100%"></div>
+                <div class="secciones"><img src="img/sede-127/sede.jpg" style="width:100%"></div>
+                <div class="secciones"><img src="img/sede-127/sede.jpg" style="width:100%"></div>
+                <div class="secciones"><img src="img/sede-127/sede.jpg" style="width:100%"></div>
+                <div class="secciones"><img src="img/sede-127/sede.jpg" style="width:100%"></div>
+
+                <a class="anterior" onclick="plusSlides(-1)">❮</a>
+                <a class="siguiente" onclick="plusSlides(1)">❯</a>
+
+                <div class="fila-inferior">
+                    <div class="columna"><img class="pasar" src="img/sede-127/sede.jpg" style="width:100%"
+                            onclick="currentSlide(1)"></div>
+                    <div class="columna"><img class="pasar" src="img/sede-127/sede.jpg" style="width:100%"
+                            onclick="currentSlide(2)"></div>
+                    <div class="columna"><img class="pasar" src="img/sede-127/sede.jpg" style="width:100%"
+                            onclick="currentSlide(3)"></div>
+                    <div class="columna"><img class="pasar" src="img/sede-127/sede.jpg" style="width:100%"
+                            onclick="currentSlide(4)"></div>
+                    <div class="columna"><img class="pasar" src="img/sede-127/sede.jpg" style="width:100%"
+                            onclick="currentSlide(5)"></div>
+                    <div class="columna"><img class="pasar" src="img/sede-127/sede.jpg" style="width:100%"
+                            onclick="currentSlide(6)"></div>
+            </article>
+        </section>
+
+
+        <!-- sección de contenido central -->
+        <section class="informacion-127">
+            <article class="subdivision-izquierda127">
+                <h2>Atención al cliente</h2>
+                <h4>Horario de atención</h4>
+                <p>Lunes a Viernes de <span class="resaltar-hora">6:30 a.m </span>a<span class="resaltar-hora">
+                        7:00 p.m</span></p>
+                <p>Sábados de <span class="resaltar-hora">6:30 a.m</span> a <span class="resaltar-hora">5:00
+                        p.m</span></p>
+                <ul class="lista-atencion127">
+                    <li>Coordinación sede: <a href="">unicentroadm@ums.com.co</a></li><br>
+                    <li>Atención al usuario: <a href="">siau@ums.com.co</a></li><br>
+                    <li>Auxiliar administrativa: <a href="">unicentroauxiliaradm@ums.com.co</a></li>
+                </ul>
+
+                <a href="https://www.google.com/maps/place/Ac+127+%2315a-55,+Bogot%C3%A1/@4.7039494,-74.0466033,17z/data=!3m1!4b1!4m6!3m5!1s0x8e3f9ab2fa9721fd:0xa9eabf0d7600add1!8m2!3d4.7039441!4d-74.0440284!16s%2Fg%2F11fq4l0dv9?entry=ttu&g_ep=EgoyMDI1MDYxMS4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank" rel="noopener noreferrer">
+                    <button class="maps" id="maps-abrir">Abrir ubicación</button>
+                </a>
+            </article>
+
+            <article class="subdivision-derecha127">
+                <h2>Servicios prestados</h2>
+                <ul class="lista-servicios127">
+                    <li><span class="resaltar-texto">Procedimientos mínimos</span> (curaciones, lavado de oidos, retiro
+                        de puntos, curetajes, inyectologia, biopsias de piel, electrocardiogramas, vendajes,
+                        cauterizaciones, retiros de cuerpo extraño en nariz u oído, infiltraciones, ortopedia y
+                        neurologia) Esterilización</li>
+                    <li><span class="resaltar-texto">Atención prioritaria no programada</span> (Medicina general)</li>
+                    <li><span class="resaltar-texto">Medicina general cita programada</span></li>
+                    <li><span class="resaltar-texto">Especialidades</span> (Ginecología, Obstetricia, Medicina interna,
+                        Dermatologia, endicronologia)</li>
+                    <li><span class="resaltar-texto">texto 1</span> aaaaaaaaaaaa</li>
+                    <li><span class="resaltar-texto">texto 1</span> aaaaaaaaaaaaa</li>
+                    <li><span class="resaltar-texto">texto 1</span> aaaaaaaaaa</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="divi-iconos">
+            <article class="iconos">
+                <img src="img/iconos-sedes/medicina-1.png" alt="">
+                <img src="img/iconos-sedes/medicina-2.png" alt="">
+                <img src="img/iconos-sedes/medicina-3.png" alt="">
+                <img src="img/iconos-sedes/medicina-4.png" alt="">
+            </article>
+        </section>
+
+
+        <!-- titulo separador "Mas sedes" -->
+        <div class="titulo-sedes">
+            <h1 class="text-titulo">Más sedes</h1>
+        </div>
+
+        <!-- seccion de las otras sedes de acceso -->
+        <section class="mas-sedes">
+            <article class="sedes">
+                <div class="sede-container">
+                    <img src="img/mas-sedes/+sedes1.jpg" alt="Imagen de la sede">
+                    <a href="" class="sede">Ir a esta sede</button></a>
+                </div>
+                <div class="sede-container">
+                    <img src="img/mas-sedes/+sedes2.jpg" alt="">
+                    <a href="" class="sede">Ir a esta sede</button></a>
+                </div>
+                <div class="sede-container">
+                    <img src="img/mas-sedes/+sedes3.jpg" alt="">
+                    <a href="" class="sede">Ir a esta sede</button></a>
+                </div>
+                <div class="sede-container">
+                    <img src="img/mas-sedes/+sedes4.jpg" alt="">
+                    <a href="" class="sede">Ir a esta sede</button></a>
+                </div>
+                <div class="sede-container">
+                    <img src="img/mas-sedes/+sedes5.jpg" alt="">
+                    <a href="" class="sede">Ir a esta sede</button></a>
+                </div>
+                <div class="sede-container">
+                    <img src="img/mas-sedes/+sedes6.jpg" alt="">
+                    <a href="" class="sede">Ir a esta sede</button></a>
+                </div>
+            </article>
+        </section>
+    </main>
+
+
+    <!--footer-->
+    <footer>
+        <div class="contenidos">
+
+            <div class="logofooter">
+                <img src="img/footer/logoUMSblanco.png" alt="">
+            </div>
+
+
+            <ul class="quienesom">
+                <li>
+                    <h3>Sobre nosotros</h3>
+                </li>
+                <li><a href="acerca-nosotros.html">Quienes somos</a></li>
+                <li><a href="acerca-nosotros.html">Objetivos de calidad</a></li>
+                <li><a href="#nada" onclick="document.getElementById('id01').style.display='block'"><i>Acceso
+                            empleados</i></a>
+                </li>
+            </ul>
+
+            <ul class="infocontact">
+                <li>
+                    <h3>Información de contacto</h3>
+                </li>
+                <li><a href="acerca-nosotros.html">Contáctanos</a></li>
+                <li><a href="sedes.html">Sedes</a></li>
+                <li>Horario de atención (dirección)</li>
+                <li>Línea de atención Call center (número telefonía)</li>
+            </ul>
+
+            <ul class="Polisticasyter">
+                <li>
+                    <h3>Políticas y términos</h3>
+                </li>
+                <li><a href="#nada">Términos y condiciones</a></li>
+                <li><a href="#nada">Política de privacidad</a></li>
+                <li><a href="#nada">Aviso legal</a></li>
+            </ul>
+        </div>
+
+        <div class="contenidos2">
+            <ul class="derechosfo">
+                <li>© [año] [Nombre de la empresa]. Todos los derechos reservados.</li>
+                <li>Diseñado por [nombre del diseñador o agencia]</li>
+                <li>Desarrollado por [nombre de la empresa/desarrollador]</li>
+            </ul>
+        </div>
+    </footer>
+
+
+    </div>
+    <script src="js/scriptsede127.js"></script>
+</body>
+
+</html>

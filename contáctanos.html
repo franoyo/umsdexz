@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad Médica santa fé</title>
+    <link rel="stylesheet" href="css/contáctanos.css" type="text/css">
+</head>
+
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <a href="inicio.html"><img class="logo-principal" src="img/menu/logoUMS.png" alt=""></a>
+        </div>
+    </div>
+
+    <div class="hamburger" id="hamburger"></div>
+    </div>
+</header>
+
+
+<body>
+    <div class="wrapper">
+
+        <div class="informacion">
+            <ul class="info">
+                <li>(dirección de la sede principal)</li>
+                <li>(telefonía del servicio al cliente)</li>
+            </ul>
+        </div>
+
+
+        <!-- Botón flotante de accesibilidad -->
+        <button id="Botonaccesible" class="aparecer-scroll"
+            style="position: fixed; bottom: 20px; right: 20px; z-index: 1001;"><img src="img/boton-accesibilidad/accesibilidad.png"
+                alt="">
+        </button>
+
+        <!-- Menú desplegable de accesibilidad -->
+        <div id="menuaccesible" class="accessibility-menu">
+            <button onclick="decreaseFontSize()" title="Reducir tamaño de letra">
+                <img src="img/boton-accesibilidad/dados1.png" alt="Reducir letra">
+            </button>
+            <button onclick="increaseFontSize()" title="Aumentar tamaño de letra">
+                <img src="img/boton-accesibilidad/dados2.png" alt="Aumentar letra">
+            </button>
+            <button id="darkModeToggle" onclick="toggleDarkMode()" title="Modo oscuro">
+                <img id="modoIcono" src="img/boton-accesibilidad/dados1.png" alt="Modo oscuro">
+            </button>
+        </div>
+
+
+
+        <!--Banner principal-->
+        <div class="banner_con">
+            <img src="img/contactanos/banner.jpeg" alt="">
+        </div>
+
+        <!--contenedor de encuesta central-->
+        <main class="contenedor_con">
+            <div class="img_formulario">
+                <img src="img/contactanos/operaria2.jpg" alt="operaria2" class="operaria2">
+            </div>
+
+            <div class="for_derecho">
+                <form id="formulario" action="datos_formulario.php" method="post">
+
+                    <label for="nombre" class="label_oculto">
+                        Nombre
+                    </label><br>
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombres" required>
+
+                    <label for="P_apellido" class="label_oculto">
+                        Primer apellido
+                    </label><br>
+                    <input type="text" id="P_apellido" name="P_apellido" placeholder="Primer apellido" required>
+
+                    <label for="S_apellido" class="label_oculto">
+                        Segundo apellido
+                    </label><br>
+                    <input type="text" id="S_apellido" name="S_apellido" placeholder="Segundo apellido" required>
+
+                    <label for="cedula" class="label_oculto">
+                        Cédula
+                    </label><br>
+                    <input type="number" id="cedula" name="cedula" placeholder="Cédula" required>
+
+                    <label for="celular" class="label_oculto">
+                        Célular
+                    </label><br>
+                    <input type="tel" id="celular" name="celular" placeholder="Celular" required>
+
+                    <label for="correo" class="label_oculto">
+                        Correo
+                    </label><br>
+                    <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required>
+
+                    <label for="mensaje" class="label_oculto">
+                        Mensaje
+                    </label><br>
+                    <textarea id="mensaje" name="mensaje" placeholder="Escríbenos tu mensaje..." class="boxmensaje"
+                        required></textarea>
+
+                    <input type="checkbox" id="terminos" name="terminos" required>
+                    <label for="terminos" class="terminos_condiciones">
+                        Acepto los <a href="#">términos y condiciones</a>
+                    </label><br>
+
+                    <button type="submit" class="boton-wrapper"> Enviar</button>
+                </form>
+            </div>
+        </main>
+
+
+        <!--footer-->
+        <footer>
+            <div class="contenidos">
+
+                <div class="logofooter">
+                    <img src="img/footer/logoUMSblanco.png" alt="">
+                </div>
+
+
+                <ul class="quienesom">
+                    <li>
+                        <h3>Sobre nosotros</h3>
+                    </li>
+                    <li><a href="acerca-nosotros.html">Quienes somos</a></li>
+                    <li><a href="acerca-nosotros.html">Objetivos de calidad</a></li>
+                    <li><a href="" onclick="document.getElementById('id01').style.display='block'"><i>Acceso
+                            empleados</i></a>
+                    </li>
+                </ul>
+
+                <ul class="infocontact">
+                    <li>
+                        <h3>Información de contacto</h3>
+                    </li>
+                    <li><a href="contáctanos.html">Contáctanos</a></li>
+                    <li><a href="sedes.html">Sedes</a></li>
+                    <li>Horario de atención (dirección)</li>
+                    <li>Línea de atención Call center (número telefonía)</li>
+                </ul>
+
+                <ul class="Polisticasyter">
+                    <li>
+                        <h3>Políticas y términos</h3>
+                    </li>
+                    <li><a href="#nada">Términos y condiciones</a></li>
+                    <li><a href="#nada">Política de privacidad</a></li>
+                    <li><a href="#nada">Aviso legal</a></li>
+                </ul>
+            </div>
+
+            <div class="contenidos2">
+                <ul class="derechosfo">
+                    <li>© [año] [Nombre de la empresa]. Todos los derechos reservados.</li>
+                    <li>Diseñado por [nombre del diseñador o agencia]</li>
+                    <li>Desarrollado por [nombre de la empresa/desarrollador]</li>
+                </ul>
+            </div>
+        </footer>
+
+        <script src="js/scriptcontáctanos.js"></script>
+    </div>
+</body>
+
+</html>

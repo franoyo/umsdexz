@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad médica santa fé</title>
+    <link rel="stylesheet" href="css/acerca-nosotros.css" type="text/css">
+</head>
+
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <a href="inicio.html"><img class="logo-principal" src="img/menu/logoUMS.png" alt=""></a>
+        </div>
+
+        <!-- Menú de escritorio -->
+        <nav class="nav-desktop">
+            <ul class="tabla">
+                <li><a href="inicio.html">inicio</a></li>
+                <li><a href="acerca-nosotros.html">Acerca de nosotros</a></li>
+                <li><a href="sedes.html">Sedes</a></li>
+                <li class="contac"><a href="contáctanos.html">Contáctanos</a></li>
+            </ul>
+        </nav>
+
+        <!-- IMPORTANTE... el menu hamburguesa y el botón de cierre, están puesto como unicode en css -->
+        <div class="hamburger" id="hamburger"></div>
+    </div>
+
+</header>
+
+
+<!-- los iconos de este menu están en el CSS -->
+<!--  Mover el menú móvil AQUÍ, fuera del header -->
+<nav id="menuMovil">
+    <ul>
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="acerca-nosotros.html">Acerca de nosotros</a></li>
+        <li><a href="sedes.html">Sedes</a></li>
+        <li><a href="contáctanos.html">Contáctanos</a></li>
+    </ul>
+</nav>
+
+
+<body>
+    <div class="wrapper">
+
+        <div class="informacion">
+            <ul class="info">
+                <li>(dirección de la sede principal)</li>
+                <li>(telefonía del servicio al cliente)</li>
+            </ul>
+        </div>
+
+        <!-- Botón flotante de accesibilidad -->
+        <button id="Botonaccesible" class="aparecer-scroll"
+            style="position: fixed; bottom: 20px; right: 20px; z-index: 1001;"><img src="img/boton-accesibilidad/accesibilidad.png" alt="">
+        </button>
+
+        <!-- Menú desplegable de accesibilidad -->
+        <div id="menuaccesible" class="accessibility-menu">
+            <button onclick="decreaseFontSize()" title="Reducir tamaño de letra">
+                <img src="img/boton-accesibilidad/dados1.png" alt="Reducir letra">
+            </button>
+            <button onclick="increaseFontSize()" title="Aumentar tamaño de letra">
+                <img src="img/boton-accesibilidad/dados2.png" alt="Aumentar letra">
+            </button>
+            <button id="darkModeToggle" onclick="toggleDarkMode()" title="Modo oscuro">
+                <img id="modoIcono" src="img/boton-accesibilidad/dados1.png" alt="Modo oscuro">
+            </button>
+        </div>
+
+
+
+        <!-- banner -->
+        <div class="banner_central">
+            <div class="texto-banner">
+                <span id="escritura"></span><span class="linea" id="linea"></span>
+            </div>
+        </div>
+
+
+
+        <!-- contenido central -->
+        <article class="contenido_central">
+            <section class="historia">
+                <h3 class="t-t">HISTORIA</h3>
+                <div class="img-c">
+                    <img src="img/acerca-nosotros/ej1.jpg" alt="">
+                </div>
+                <div class="contenido">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                        galley<span class="dots">...</span><span class="more">
+                            of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries,
+                            but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                            popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                            passages,
+                            and more recently with desktop publishing software like Aldus PageMaker including versions
+                            of
+                            Lorem Ipsum.</span>
+                    </p>
+                    <button class="leer-mas">Leer más</button>
+                </div>
+            </section>
+
+            <section class="mision">
+                <h3 class="t-t">MISIÓN</h3>
+                <div class="img-c">
+                    <img src="img/acerca-nosotros/ej2.jpg" alt="">
+                </div>
+                <div class="contenido">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's <span class="dots">...</span><span class="more">standard dummy text ever since
+                            the
+                            1500s, when an unknown printer took a galley
+                            of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries,
+                            but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                            popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                            passages,
+                            and more recently with desktop publishing software like Aldus PageMaker including versions
+                            of
+                            Lorem Ipsum.</span></p>
+                    <button class="leer-mas">Leer más</button>
+                </div>
+            </section>
+
+            <section class="vision">
+                <h3 class="t-t">VISIÓN</h3>
+                <div class="img-c">
+                    <img src="img/acerca-nosotros/ej3.jpg" alt="">
+                </div>
+                <div class="contenido">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's <span class="dots">...</span><span class="more">standard dummy text ever since
+                            the
+                            1500s, when an unknown printer took a galley
+                            of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries,
+                            but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                            popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                            passages,
+                            and more recently with desktop publishing software like Aldus PageMaker including versions
+                            of
+                            Lorem Ipsum.</span></p>
+                    <button class="leer-mas">Leer más</button>
+                </div>
+            </section>
+
+            <section class="politica">
+                <h3 class="t-t">POLÍTICAS</h3>
+                <div class="img-c">
+                    <img src="img/acerca-nosotros/ej4.jpg" alt="">
+                </div>
+                <div class="contenido">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                        popularised in <span class="dots">...</span><span class="more">the 1960s with the release of
+                            Letraset
+                            sheets containing Lorem Ipsum passages,
+                            and more recently with desktop publishing software like Aldus PageMaker including versions
+                            of
+                            Lorem Ipsum.</span></p>
+                    <button class="leer-mas">Leer más</button>
+                </div>
+            </section>
+        </article>
+
+        <div class="objetivos">
+            <div class="text-objetivos">
+                <p>Conoce nuestros</p>
+                <h2>objetivos de calidad</h2>
+            </div>
+
+            <div class="contenedor_oc">
+                <div class="cualidad">
+                    <i class="giro-star"><img src="img/acerca-nosotros/star.png" alt=""></i>
+                    <p>Prestar servicios de salud oportunos.</p>
+                </div>
+                <div class="cualidad">
+                    <i class="giro-star"><img src="img/acerca-nosotros/star.png" alt=""></i>
+                    <p>Prestar servicios de salud accesibles.</p>
+                </div>
+                <div class="cualidad">
+                    <i class="giro-star"><img src="img/acerca-nosotros/star.png" alt=""></i>
+                    <p>Prestar servicios de salud con racionalidad técnico-cientifica.</p>
+                </div>
+                <div class="cualidad">
+                    <i class="giro-star"><img src="img/acerca-nosotros/star.png" alt=""></i>
+                    <p>Mejorar continuamente procesos asistenciales y administrativos.</p>
+                </div>
+                <div class="cualidad">
+                    <i class="giro-star"><img src="img/acerca-nosotros/star.png" alt=""></i>
+                    <p>Lograr la satisfacción del cliente.</p>
+                </div>
+            </div>
+        </div>
+
+        <!--footer-->
+        <footer>
+            <div class="contenidos">
+
+                <div class="logofooter">
+                    <img src="img/footer/logoUMSblanco.png" alt="">
+                </div>
+
+
+                <ul class="quienesom">
+                    <li>
+                        <h3>Sobre nosotros</h3>
+                    </li>
+                    <li><a href="acerca-nosotros.html">Quienes somos</a></li>
+                    <li><a href="acerca-nosotros.html">objetivos de calidad</a></li>
+                    <li><a href="" onclick="document.getElementById('id01').style.display='block'"><i>Acceso
+                            empleados</i></a>
+                    </li>
+                </ul>
+
+                <ul class="infocontact">
+                    <li>
+                        <h3>Información de contacto</h3>
+                    </li>
+                    <li><a href="contáctanos.html">Contáctanos</a></li>
+                    <li><a href="sedes.html">Sedes</a></li>
+                    <li>Horario de atención (dirección)</li>
+                    <li>Línea de atención Call center (número telefonía)</li>
+                </ul>
+
+                <ul class="Polisticasyter">
+                    <li>
+                        <h3>Políticas y términos</h3>
+                    </li>
+                    <li><a href="#nada">Términos y condiciones</a></li>
+                    <li><a href="#nada">Política de privacidad</a></li>
+                    <li><a href="#nada">Aviso legal</a></li>
+                </ul>
+            </div>
+
+            <div class="contenidos2">
+                <ul class="derechosfo">
+                    <li>© [año] [Nombre de la empresa]. Todos los derechos reservados.</li>
+                    <li>Diseñado por [nombre del diseñador o agencia]</li>
+                    <li>Desarrollado por [nombre de la empresa/desarrollador]</li>
+                </ul>
+            </div>
+        </footer>
+
+
+        <script src="js/scriptacerca-nosotros.js"></script>
+
+    </div>
+</body>
+
+</html>

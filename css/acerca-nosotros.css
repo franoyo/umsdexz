@@ -1,0 +1,981 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*---Menu PRINCIPAL--*/
+/* --- Estilos base del header --- */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    max-width: 90%;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1900;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+.header-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-inline: 20px;
+}
+
+/* Logo */
+.logo img {
+    max-width: 210px;
+    height: auto;
+    position: absolute;
+    bottom: -3px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.07);
+}
+
+/* Menú escritorio */
+.nav-desktop {
+    display: flex;
+}
+
+.nav-desktop ul {
+    display: flex;
+    margin: 0 30px;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-desktop li {
+    list-style: none;
+    margin: 0 5px;
+}
+
+.nav-desktop li a {
+    text-decoration: none;
+    color: #0c4d6c;
+    display: flex;
+    margin: 0 10px;
+}
+
+.nav-desktop ul li a:hover {
+    color: #158cc3;
+}
+
+/* Botón "Contáctanos" */
+.contac a {
+    background-color: #09394f;
+    color: #ffffff !important;
+    padding: 15px;
+    border-radius: 30px;
+    border: 0.5px solid #ffffff;
+}
+
+.contac a:hover {
+    background-color: #ffffff;
+    color: #1277a6 !important;
+    border: 0.5px solid #1277a6;
+}
+
+/* Menú hamburguesa */
+.hamburger {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: #09394f;
+    position: relative;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+}
+
+/* Posicion icono menu hamburguesa */
+.hamburger::before {
+    content: '☰';
+    color: #09394f;
+}
+
+/* posicion del icono X */
+.hamburger.change::before {
+    content: '✖';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 26px;
+    height: 26px;
+    font-size: 26px;
+    color: #09394f;
+    line-height: 26px;
+    text-align: center;
+    user-select: none;
+}
+
+/* Menú móvil */
+#menuMovil {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 95px;
+    right: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 999;
+    text-align: center;
+    padding: 1rem 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+#menuMovil.menu-open {
+    background: rgba(255, 255, 255, 0.726);
+    backdrop-filter: blur(10px);
+    transition: background 0.2s ease, color 0.2s ease;
+    display: flex;
+}
+
+.menu-open {
+    margin-top: 30px;
+    border-radius: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 90%;
+}
+
+#menuMovil.menu-open a {
+    color: rgb(0, 0, 0);
+}
+
+#menuMovil ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menuMovil ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #c5c5c5;
+}
+
+#menuMovil ul li a {
+    text-decoration: none;
+    color: #000000;
+}
+
+#menuMovil ul li a:hover {
+    color: #158cc3;
+}
+
+/* Header al hacer scroll */
+header.scrolled {
+    background: rgba(255, 255, 255, 0.726);
+    backdrop-filter: blur(10px);
+    color: rgb(255, 255, 255);
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+header.scrolled a {
+    color: rgb(0, 0, 0);
+}
+
+/*---- Contactos superior----*/
+.informacion {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2000;
+    background-color: #0c4d6c;
+    display: flex;
+    justify-content: flex-start;
+    padding: 2px 0;
+    height: 30px;
+}
+
+.informacion ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    margin: 0rem 0rem;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.informacion ul li {
+    text-decoration: none;
+    color: #ffffff;
+    margin: 0rem 1rem;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+/* Botón de accesibilidad */
+#Botonaccesible {
+    position: fixed;
+    left: 25px;
+    top: 400px;
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    border: .5px solid #ff8c00;
+    border-radius: 50%;
+    font-size: 24px;
+    z-index: 1000;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+#Botonaccesible:hover {
+    transform: scale(1.1);
+}
+
+/* Menú desplegable de accesibilidad */
+#menuaccesible {
+    position: fixed;
+    left: 20px;
+    top: 200px;
+    background-color: rgba(255, 255, 255, 0.726);
+    backdrop-filter: blur(10px);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+    min-width: 20px;
+
+    /* transicion de menu */
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#menuaccesible.show-menu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+
+#Botonaccesible img {
+    width: 35px;
+    height: auto;
+
+}
+
+
+/* Estilo de botones dentro del menú */
+#menuaccesible button {
+    background-color: transparent;
+    border: none;
+    color: #000000;
+    padding: 8px 12px;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: 16px;
+    border-radius: 6px;
+}
+
+#menuaccesible button:hover {
+    background-color: #e0e0e0;
+}
+
+#menuaccesible button img {
+    width: 40px;
+    height: 40px;
+}
+
+/* banner */
+.banner_central {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    max-height: auto;
+    background-color: #c56c00;
+}
+
+.texto-banner {
+    color: white;
+    width: 850px;
+    z-index: 2;
+    font-size: 7em;
+    font-style: bold;
+    float: left;
+    margin: 150px 0 0 0;
+    padding: 0 0 100px 120px;
+}
+
+.linea {
+    display: inline-block;
+    width: 0.8em;
+    height: 0.8em;
+    border-radius: 50%;
+    background-color: white;
+    animation: parpadeo 0.8s infinite;
+}
+
+@keyframes parpadeo {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* cotenido central */
+article {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    margin-top: 100px;
+    justify-content: space-between;
+    padding-inline: 100px;
+    align-items: start;
+}
+
+section {
+    display: flex;
+    width: 30%;
+    height: auto;
+    padding: 0 20px;
+    overflow: hidden;
+    margin-bottom: 80px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* titulo por tarjeta */
+.t-t {
+    text-align: center;
+    font-size: 1.5em;
+    color: #09394f;
+    padding: 10px;
+}
+
+.img-c {
+    height: 100px;
+    border-radius: 15px;
+}
+
+.img-c img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.contenido {
+    height: calc(100% - 200px);
+    /* espacio restante debajo de imagen */
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.contenido p {
+    max-height: 65px;
+    overflow: hidden;
+}
+
+.contenido.expandido p {
+    max-height: 100%;
+    overflow: visible;
+}
+
+
+.more {
+    display: inline;
+}
+
+.dots {
+    display: inline;
+}
+
+.contenido.expandido .dots {
+    display: none;
+}
+
+.contenido:not(.expandido) .more {
+    display: none;
+}
+
+.leer-mas {
+    color: #158cc3;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 1px solid #0c4d6c;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    cursor: pointer;
+    margin-top: auto;
+    font-size: 1em;
+    text-align: left;
+    padding: 5px;
+    transition: ease 0.2s;
+}
+
+.leer-mas:hover {
+    color: white;
+    background-color: #0f6289;
+    border-radius: 5px;
+}
+
+/* objetivos de calidad */
+.objetivos {
+    width: 100%;
+    height: 100%;
+    padding-top: 80px;
+}
+
+.text-objetivos {
+    display: flex;
+    background-color: #158cc3;
+    width: 100%;
+    height: 300px;
+    margin: auto;
+    padding: 0 0 0 120px;
+    align-items: center;
+}
+
+.text-objetivos p {
+    margin-right: 15px;
+    color: rgb(223, 223, 223);
+    font-size: 2em;
+
+}
+
+.text-objetivos h2 {
+    color: white;
+    font-size: 5em;
+}
+
+
+/* contenedor de estrellas */
+.contenedor_oc {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding-inline: 150px;
+}
+
+.cualidad {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 100px 30px 200px 30px;
+    color: rgb(0, 0, 0);
+    /* margen entre cada recuadro */
+}
+
+.cualidad p {
+    margin-top: 10px;
+}
+
+/* propiedades de la estrella */
+.giro-star img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+}
+
+.giro-star:hover {
+    transform: rotateY(180deg);
+}
+
+.cualidad .giro-star {
+    transition: 0.5s;
+}
+
+
+/*--footer--*/
+footer {
+    background-color: #000000;
+    max-width: 100%;
+    color: white;
+    padding-top: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+.contenidos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+.contenidos h3 {
+    color: #ff9610;
+}
+
+.contenidos ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contenidos ul li {
+    margin: 5px 0;
+    text-align: left;
+}
+
+.contenidos ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.contenidos ul li a:hover {
+    text-decoration: underline;
+}
+
+.logofooter {
+    margin-top: 20px;
+}
+
+.logofooter img {
+    width: 300px;
+    height: auto;
+}
+
+.contenidos2 {
+    width: 100%;
+    background-color: #474646;
+    margin: 0 0px;
+    padding: 0px 0;
+    font-size: 12px;
+    text-align: center;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0px;
+}
+
+.derechosfo {
+    list-style: none;
+    padding: 0;
+}
+
+.derechosfo li {
+    margin: 5px 0;
+    font-size: 12px;
+}
+
+.derechosfo li a {
+    color: white;
+    text-decoration: none;
+}
+
+.derechosfo li a:hover {
+    text-decoration: underline;
+}
+
+
+/* modo oscuro */
+body.dark-mode {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+body.dark-mode header .contac a {
+    background-color: rgb(196, 196, 196);
+    color: black;
+    border: 0.5px solid rgb(196, 196, 196);
+}
+
+body.dark-mode header .contac a:hover {
+    background-color: black;
+    color: white;
+    border: 0.5px solid black;
+}
+
+body.dark-mode header {
+    background-color: black;
+}
+
+body.dark-mode header.scrolled {
+    background: rgba(0, 0, 0, 0.174);
+    backdrop-filter: blur(10px);
+    color: rgb(255, 255, 255);
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+body.dark-mode header.scrolled a {
+    color: rgb(255, 255, 255);
+}
+
+body.dark-mode header.scrolled a:hover {
+    color: #0c4d6c;
+}
+
+/* modo oscuro menu movil */
+body.dark-mode .hamburger::before {
+    color: white;
+}
+
+body.dark-mode .hamburger.change::before {
+    color: white;
+}
+
+body.dark-mode #menuMovil.menu-open {
+    background: rgba(255, 255, 255, 0.258);
+    backdrop-filter: blur(10px);
+    transition: background 0.2s ease, color 0.2s ease;
+    display: flex;
+}
+
+body.dark-mode #menuMovil.menu-open a {
+    color: white;
+}
+
+body.dark-mode #menuMovil.menu-open a:hover {
+    color: #0c4d6c;
+}
+
+body.dark-mode a {
+    color: #ffffff;
+}
+
+/* modo oscuro de contenido central */
+body.dark-mode .t-t {
+    color: white;
+}
+
+body.dark-mode .leer-mas {
+    color: #19a1e0;
+    border-bottom: 1px solid #158cc3;
+}
+
+body.dark-mode .leer-mas:hover {
+    background-color: #0c4d6c;
+    color: white;
+}
+
+/* modo oscuro de objetivos de calidad */
+body.dark-mode .giro-star img {
+    content: url('../img/acerca-nosotros/starBLANCA.png');
+
+}
+
+body.dark-mode .cualidad p {
+    color: white;
+}
+
+/* modo oscuro FOOTER y logo principal */
+body.dark-mode footer {
+    background-color: #2a2a2a;
+}
+
+body.dark-mode .logo-principal {
+    content: url('../img/menu/logoUMSblanco.png');
+}
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+
+    /* banner central */
+    .banner_central {
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        padding: 40px 0 50px 0;
+    }
+
+    .texto-banner {
+        width: 100%;
+        font-size: 5em;
+        margin: 200px 0 0 0;
+        padding: 0 40px;
+    }
+
+
+    /* objetivos de calidad */
+    .text-objetivos {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 70px;
+        margin-bottom: 30px;
+    }
+
+    .text-objetivos p {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+    }
+
+    .text-objetivos h2 {
+        font-size: 3.5em;
+    }
+
+    .contenedor_oc {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 60px;
+        margin-top: 60px;
+        margin-bottom: 90px;
+    }
+
+    .cualidad {
+        width: calc(50% - 60px);
+        margin: 30px;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    * {
+        font-size: 1em;
+    }
+
+    /*Información superior*/
+    .informacion {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 4px 0;
+    }
+
+    .informacion ul {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .informacion ul li a {
+        margin: 0;
+    }
+
+    /* header */
+    header {
+        top: 50px;
+    }
+
+    /*--Menu hamburguesa--*/
+    .nav-desktop {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        color: black;
+    }
+
+
+    /* banner central */
+    .banner_central {
+        padding: 40px 0 70px 0;
+        height: 100%;
+        max-height: auto;
+    }
+
+    .texto-banner {
+        font-size: 3.5em;
+        text-align: left;
+        padding: 0 120px;
+        margin-top: 150px;
+    }
+
+    .linea {
+        width: 0.8em;
+        border-radius: 50%;
+        height: 0.8em;
+    }
+
+    /* contendio central */
+    article {
+        flex-direction: column;
+        padding-inline: 70px;
+    }
+
+    section {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    /* objetivos de calidad y titulo */
+    .text-objetivos {
+        text-align: center;
+        align-items: center;
+        height: 100%;
+        max-height: auto;
+        padding-top: 30px;
+    }
+
+    .text-objetivos h2 {
+        font-size: 3em;
+    }
+
+    .text-objetivos p {
+        font-size: 1.5em;
+    }
+
+    .contenedor_oc {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: 100px;
+        margin-bottom: 90px;
+        padding: 0 60px;
+    }
+
+    .cualidad {
+        display: flex;
+        width: 100%;
+        margin: 30px 0;
+    }
+
+    .giro-star img {
+        width: 70px;
+        height: 70px;
+    }
+
+    /*Footer*/
+    .contenidos ul,
+    .logofooter {
+        width: 90%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contenidos ul li {
+        text-align: center;
+    }
+
+    .contenidos ul {
+        margin-bottom: 20px;
+    }
+
+    .logofooter img {
+        width: 150px;
+    }
+
+    .contenidos2 {
+        flex-direction: column;
+        padding: 10px;
+        top: 80px;
+    }
+
+    .derechosfo li {
+        margin: 5px 0;
+    }
+
+    /* Boton accesibilidad*/
+    #Botonaccesible {
+        width: 60px;
+        height: 60px;
+        top: auto;
+        margin-bottom: 100px;
+        left: 25px;
+    }
+
+    #menuaccesible {
+        left: 25px;
+        bottom: 200px;
+        top: auto;
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    #menuaccesible button {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* banner central */
+    .banner_central {
+        height: 100%;
+        max-height: auto;
+    }
+
+    .texto-banner {
+        font-size: 2.7em;
+        margin-top: 150px;
+        padding: 0 20px;
+    }
+
+    .linea {
+        width: 0.8em;
+        border-radius: 50%;
+        height: 0.8em;
+    }
+
+    /* objetivos de calidad */
+    .text-objetivos h2 {
+        font-size: 2.2em;
+    }
+
+    .text-objetivos p {
+        font-size: 1.2em;
+    }
+
+    .giro-star img {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* footer */
+    .logofooter img {
+        width: 120px;
+    }
+
+    footer {
+        padding: 60px 0;
+    }
+
+    .contenidos2 {
+        font-size: 10px;
+    }
+
+    .derechosfo li {
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad Médica santa fé</title>
+    <link rel="stylesheet" href="css/estiloinicio.css" type="text/css">
+
+
+    <!-- importar fuente tipografica de enlace en código de google fonts -->
+    <style>
+        @import url();
+    </style>
+</head>
+
+
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <a href="inicio.html"><img class="logo-principal" src="img/menu/logoUMS.png" alt=""></a>
+        </div>
+
+        <!-- Menú de escritorio -->
+        <nav class="nav-desktop">
+            <ul class="tabla">
+                <li><a href="inicio.html">inicio</a></li>
+                <li><a href="acerca-nosotros.html">Acerca de nosotros</a></li>
+                <li><a href="sedes.html">Sedes</a></li>
+                <li class="contac"><a href="contáctanos.html">Contáctanos</a></li>
+            </ul>
+        </nav>
+
+        <!-- IMPORTANTE... el menu hamburguesa y el botón de cierre, están puesto como unicode en css -->
+        <div class="hamburger" id="hamburger"></div>
+    </div>
+
+</header>
+
+
+<!-- los iconos de este menu están en el CSS -->
+<!--  Mover el menú móvil AQUÍ, fuera del header -->
+<nav id="menuMovil">
+    <ul>
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="acerca-nosotros.html">Acerca de nosotros</a></li>
+        <li><a href="sedes.html">Sedes</a></li>
+        <li><a href="contáctanos.html">Contáctanos</a></li>
+    </ul>
+</nav>
+
+<body>
+
+    <div class="wrapper">
+
+        <div class="informacion">
+            <ul class="info">
+                <li>(dirección de la sede principal)</li>
+                <li>(telefonía del servicio al cliente)</li>
+            </ul>
+        </div>
+
+
+        <!-- Botón flotante de accesibilidad -->
+        <button id="Botonaccesible" class="aparecer-scroll"
+            style="position: fixed; bottom: 20px; right: 20px; z-index: 1001;"><img src="img/boton-accesibilidad/accesibilidad.png"
+                alt="">
+        </button>
+
+        <!-- Menú desplegable de accesibilidad -->
+        <div id="menuaccesible" class="accessibility-menu">
+            <button onclick="decreaseFontSize()" title="Reducir tamaño de letra">
+                <img src="img/boton-accesibilidad/dados1.png" alt="Reducir letra">
+            </button>
+            <button onclick="increaseFontSize()" title="Aumentar tamaño de letra">
+                <img src="img/boton-accesibilidad/dados2.png" alt="Aumentar letra">
+            </button>
+            <button id="darkModeToggle" onclick="toggleDarkMode()" title="Modo oscuro">
+                <img id="modoIcono" src="img/boton-accesibilidad/accesibilidad.png" alt="Modo oscuro">
+            </button>
+        </div>
+
+
+        <!--carrusel principal-->
+        <div class="diapositivas-contenedor">
+
+            <div class="banner desvanecer">
+                <a href="#servicios">
+                    <img src="img/inicio/paisaje.jpg" style="width:100%" height="350px" alt="Ir a Servicios">
+                </a>
+            </div>
+
+            <div class="banner desvanecer">
+                <a href="#nosotros">
+                    <img src="img/inicio/paisaje2.jpg" style="width:100%" height="350px" alt="Ir a Nosotros">
+                </a>
+            </div>
+
+            <div class="banner desvanecer">
+                <a href="#contacto">
+                    <img src="img/inicio/paisaje3.jpg" style="width:100%" height="350px" alt="Ir a Contacto">
+                </a>
+            </div>
+
+        </div>
+
+        <br>
+
+        <div style="text-align:center">
+            <span class="punto"></span>
+            <span class="punto"></span>
+            <span class="punto"></span>
+        </div>
+
+        <div class="titulo-contenido">
+            <h1>Cuidate y cuida a los demás</h1>
+        </div>
+
+
+        <!-- contenedor central de tarjetas informativas-->
+        <main class="contenedor">
+            <div class="grupo-tarjeta">
+                <div class="tarjeta">
+                    <img src="img/inicio/paisaje.jpg" alt="arbol">
+                    <div class="interior">
+                        <h3>Derechos y deberes del paciente</h3>
+                        <p>Todo paciente tiene derecho a recibir un trato digno y respetuoso.</p>
+                    </div>
+                </div>
+                <div class="boton-tarjeta">
+                    <button class="buton" data-url="servicios.html">Ver más</button>
+                </div>
+            </div>
+
+            <div class="grupo-tarjeta">
+                <div class="tarjeta">
+                    <img src="img/inicio/paisaje2.jpg" alt="arbol2">
+                    <div class="interior">
+                        <h3>Política de protección de datos</h3>
+                        <p>Al navegar en nuestro sitio, aceptas cookies y el tratamiento de datos.</p>
+                    </div>
+                </div>
+                <div class="boton-tarjeta">
+                    <button class="buton" data-url="servicios.html">Ver más</button>
+                </div>
+            </div>
+
+            <div class="grupo-tarjeta">
+                <div class="tarjeta">
+                    <img src="img/inicio/paisaje3.jpg" alt="arbol3">
+                    <div class="interior">
+                        <h3>Agua y saneamiento básico</h3>
+                        <p>El agua limpia es salud, el saneamiento es bienestar.</p>
+                    </div>
+                </div>
+                <div class="boton-tarjeta">
+                    <button class="buton" data-url="servicios.html">Ver más</button>
+                </div>
+            </div>
+
+            <div class="grupo-tarjeta">
+                <div class="tarjeta">
+                    <img src="img/inicio/paisaje4.jpg" alt="arbol4">
+                    <div class="interior">
+                        <h3>Lavado de manos</h3>
+                        <p>El agua y el jabón son tus mejores aliados contra enfermedades.</p>
+                    </div>
+                </div>
+                <div class="boton-tarjeta">
+                    <button class="buton" data-url="servicios.html">Ver más</button>
+                </div>
+            </div>
+        </main>
+
+
+        <aside>
+            <div class="bloques">
+                <!-- Bloque izquierdo con carrusel -->
+                <div class="bloque-izquierdo">
+                    <div class="tituloizq">
+                        <h3>Nuestros <span>aliados</span></h3>
+                    </div>
+                    <div class="carrusel">
+                        <div class="carrusel-inner">
+                            <img src="img/inicio/logo-compensar.png" alt="compensar">
+                            <img src="img/inicio/Logo-dinamica.png" alt="dinamica">
+                            <img src="img/inicio/Logo-idime.png" alt="idime">
+                            <img src="img/inicio/Logo-mederi.png" alt="mederi">
+                            <img src="img/inicio/Logo-sura.png" alt="sura">
+                            <!-- Agregar imágenes-->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bloque derecho -->
+                <div class="bloque-derecho">
+                    <div class="textoder">
+                        <p>Linea de atencion Call center</p>
+                    </div>
+                    <div class="telefonia">
+                        <img src="img/inicio/telefono.png" alt="Teléfono">
+                    </div>
+                    <div class="operaria">
+                        <img src="img/inicio/operaria.jpg" alt="Operaria">
+                    </div>
+                    <div>
+                        <a href="tel:+573027969141" class="boton-llamar">Llama ahora</a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+
+        <!--footer-->
+        <footer>
+            <div class="contenidos">
+
+                <div class="logofooter">
+                    <img src="img/footer/logoUMSblanco.png" alt="">
+                </div>
+
+
+                <ul class="quienesom">
+                    <li>
+                        <h3>Sobre nosotros</h3>
+                    </li>
+                    <li><a href="acerca-nosotros.html">Quienes somos</a></li>
+                    <li><a href="acerca-nosotros.html">Objetivos de calidad</a></li>
+                    <li><a href="#nada" onclick="document.getElementById('id01').style.display='block'"><i>Acceso
+                            empleados</i></a>
+                    </li>
+                </ul>
+
+                <ul class="infocontact">
+                    <li>
+                        <h3>Información de contacto</h3>
+                    </li>
+                    <li><a href="acerca-nosotros.html">Contáctanos</a></li>
+                    <li><a href="sedes.html">Sedes</a></li>
+                    <li>Horario de atención (dirección)</li>
+                    <li>Línea de atención Call center (número telefonía)</li>
+                </ul>
+
+                <ul class="Polisticasyter">
+                    <li>
+                        <h3>Políticas y términos</h3>
+                    </li>
+                    <li><a href="#nada">Términos y condiciones</a></li>
+                    <li><a href="#nada">Política de privacidad</a></li>
+                    <li><a href="#nada">Aviso legal</a></li>
+                </ul>
+            </div>
+
+            <div class="contenidos2">
+                <ul class="derechosfo">
+                    <li>© [año] [Nombre de la empresa]. Todos los derechos reservados.</li>
+                    <li>Diseñado por [nombre del diseñador o agencia]</li>
+                    <li>Desarrollado por [nombre de la empresa/desarrollador]</li>
+                </ul>
+            </div>
+        </footer>
+
+
+        <!-- Modulo inicio de sesion acceso a empleados -->
+        <div id="id01" class="modal">
+
+            <form class="modal-content animate" action="/action_page.php" method="post">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                        title="Close Modal">&times;</span>
+                </div>
+
+                <div class="container-ae">
+                    <input type="text" placeholder="Usuario" name="uname" required>
+
+
+                    <input type="password" placeholder="Contraseña" name="psw" required>
+                    <input type="checkbox" checked="checked" name="remember"> Recordarme
+                    </label>
+
+                    <span class="psw">Olvidaste tu <a href="#">Contraseña?</a></span>
+
+                    <button type="submit">Ingresar</button>
+                    <label>
+
+                </div>
+            </form>
+        </div>
+
+        <script src="js/scriptinicio.js"></script>
+    </div>
+</body>
+
+
+</html>
